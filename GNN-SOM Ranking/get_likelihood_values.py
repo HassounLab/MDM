@@ -70,14 +70,14 @@ def get_likelihood_scores(conversionFile, inputFile):
                 reaction_centers_list.append(value["Reaction_Centers"])
             
     # Configurate 10 GNN-SOM models to apply
-    with open('/Users/sammiechum/Downloads/data/config.json', 'r') as f:
+    with open('data/config.json', 'r') as f:
         config = json.load(f)
     config['features']['enzyme'] = [tuple(ec) for ec in config['features']['enzyme']] 
     
     models = []
     for i, params in enumerate(config['models']):
         model = createGnnSom(*config['models'][i])
-        loadGnnSomState(model, torch.load('/Users/sammiechum/Downloads/data/model%d.pt' % i, map_location=torch.device('cpu')))
+        loadGnnSomState(model, torch.load('data/model%d.pt' % i, map_location=torch.device('cpu')))
         models.append(model)
     
 

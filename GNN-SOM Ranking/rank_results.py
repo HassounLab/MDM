@@ -161,9 +161,9 @@ def rank_GNN_Results(valuesFile, outputFile, inputFile, nameConversionFile):
                            csv_writer.writerow([column1, column2, column3, column4, column5])
                            print(f"  Rank {rank}/{total}: Drug: {item['Drug']} - Product ID: {item['Product']} - Value: {item['Value']}")
             
-inputFile = '/Users/sammiechum/Downloads/updated_set2_gnn_input.json'          
-valuesFile = '/Users/sammiechum/Downloads/GNN_values_set2_upload2.json'
-outputFile = '/Users/sammiechum/Downloads/set2Ranked_upload.csv'
-nameConversionFile = '/Users/sammiechum/Downloads/conv2.csv'  
+inputFile = 'data/updated_set2_gnn_input.json'          
+valuesFile = 'data/GNN_values_set2_upload2.json'
+outputFile = 'data/set2Ranked_upload.csv'
+nameConversionFile = 'data/Downloads/conv2.csv'  
 
 rank_GNN_Results(valuesFile, outputFile, inputFile, nameConversionFile)
